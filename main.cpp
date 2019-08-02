@@ -65,9 +65,18 @@ static int read_yuv_file(char *filename, unsigned char *yuvbuf, int yuvbuf_size)
     }
 }
 
+const char yuv2image_package_string[] = "yuv2image" " 1.0.1";
+
+static void print_version(void)
+{
+    printf("this is %s\ncopyright (c) 2018-2019 andy ongg <www.xiamiworks.com>\n\n", yuv2image_package_string);
+}
+
 int main(int argc, char* argv[])
 {
     int ret = 0;
+    
+    print_version();
     
     if(argc < 6)
     {
